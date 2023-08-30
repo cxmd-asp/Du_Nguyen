@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_authentication"
+    app:startDestination="@id/fragment_chat_single">
+
+    <fragment
+        android:id="@+id/fragment_chat_room"
+        android:name="com.example.safarione.ui.room.ChatRoomFragment"
+        android:label="@string/chat_room"
+        tools:layout="@layout/fragment_list_chat_room" />
+
+    <fragment
+        android:id="@+id/fragment_chat_single"
+        android:name="com.example.safarione.ui.member.CreateSingleChatFragment"
+        android:label="@string/contacts"
+        tools:layout="@layout/fragment_chat_single_create">
+
+        <action
+            android:id="@+id/to_chat_message"
+            app:destination="@id/fragment_chat_message" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_chat_message"
+        android:name="com.example.safarione.ui.chat.ChatMessageFragment"
+        tools:layout="@layout/fragment_chat_message">
+
+        <argument
+            android:name="room_id"
+            app:argType="long" />
+
+    </fragment>
+</navigation>

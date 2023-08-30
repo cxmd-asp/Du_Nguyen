@@ -1,0 +1,84 @@
+[versions]
+androidGradlePlugin = "8.0.1"
+androidx-coreKtx = "1.10.1"
+androidx-junit = "1.1.5"
+appcompat = "1.6.1"
+buildTools = "33.0.0"
+circleimageview = "3.1.0"
+compileSdk = "33"
+constraintlayout = "2.1.4"
+datastorePreferences = "1.0.0"
+datastore = "1.0.0"
+espressoCore = "3.5.1"
+glide = "4.15.1"
+hilt = "2.46.1"
+hiltJetpackVersion = "1.0.0"
+junit = "4.13.2"
+kspGradlePlugin = "1.8.10-1.0.9"
+kotlinGradlePlugin = "1.8.0"
+kotlinxCoroutinesAndroidVersion = "1.7.1"
+lifecycleKtx = "2.6.1"
+material = "1.9.0"
+material3 = "1.1.1"
+minSdk = "26"
+navigation = "2.5.3"
+pagingRuntime = "3.1.1"
+pagingRuntimeKtx = "3.1.1"
+recyclerview = "1.3.1"
+room = "2.5.2"
+smack = "4.4.6"
+timber = "5.0.1"
+
+[libraries]
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidx-coreKtx" }
+appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+circleimageview = { module = "de.hdodenhof:circleimageview", version.ref = "circleimageview" }
+constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
+datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastorePreferences" }
+datastore = { module = "androidx.datastore:datastore", version.ref = "datastore" }
+espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espressoCore" }
+ext-junit = { module = "androidx.test.ext:junit", version.ref = "androidx-junit" }
+firebase-analytics = { module = "com.google.firebase:firebase-analytics-ktx" }
+firebase-crashlytics = { module = "com.google.firebase:firebase-crashlytics-ktx" }
+firebase-messaging = { module = "com.google.firebase:firebase-messaging-ktx" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+glide-annotations = { module = "com.github.bumptech.glide:annotations", version.ref = "glide" }
+glide-compiler = { module = "com.github.bumptech.glide:ksp", version.ref = "glide" }
+glide-okhttp3-integration = { module = "com.github.bumptech.glide:okhttp3-integration", version.ref = "glide" }
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt" }
+hilt-work = { module = "androidx.hilt:hilt-work", version.ref = "hiltJetpackVersion" }
+jetbrains-kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesAndroidVersion" }
+jetbrains-kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesAndroidVersion" }
+junit = { module = "junit:junit", version.ref = "junit" }
+lifecycle-common-java8 = { module = "androidx.lifecycle:lifecycle-common-java8", version.ref = "lifecycleKtx" }
+lifecycle-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycleKtx" }
+lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleKtx" }
+lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleKtx" }
+lifecycle-viewmodel-savedstate = { module = "androidx.lifecycle:lifecycle-viewmodel-savedstate", version.ref = "lifecycleKtx" }
+material = { module = "com.google.android.material:material", version.ref = "material" }
+navigation-dynamic-features-fragment = { module = "androidx.navigation:navigation-dynamic-features-fragment", version.ref = "navigation" }
+navigation-fragment-ktx = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigation" }
+navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigation" }
+paging-runtime = { module = "androidx.paging:paging-runtime", version.ref = "pagingRuntime" }
+paging-runtime-ktx = { module = "androidx.paging:paging-runtime-ktx", version.ref = "pagingRuntimeKtx" }
+recyclerview = { module = "androidx.recyclerview:recyclerview", version.ref = "recyclerview" }
+room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
+room-paging = { module = "androidx.room:room-paging", version.ref = "room" }
+room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+smack-android = { module = "org.igniterealtime.smack:smack-android", version.ref = "smack" }
+smack-android-extensions = { module = "org.igniterealtime.smack:smack-android-extensions", version.ref = "smack" }
+smack-im = { module = "org.igniterealtime.smack:smack-im", version.ref = "smack" }
+smack-tcp = { module = "org.igniterealtime.smack:smack-tcp", version.ref = "smack" }
+timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
+[plugins]
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinGradlePlugin" }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlinGradlePlugin" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlinGradlePlugin" }
+kotlin-ksp = { id = "com.google.devtools.ksp", version.ref = "kspGradlePlugin" }
+kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlinGradlePlugin" }
+navigation-safeargs-kotlin = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navigation" }

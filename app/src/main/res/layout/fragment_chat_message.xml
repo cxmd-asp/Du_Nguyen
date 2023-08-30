@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.example.safarione.ui.chat.contract.ChatMessageContract.ViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_bottom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="?colorSurface"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/space_line"
+                android:background="@drawable/bg_shadow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/space_medium"
+                android:background="@drawable/bg_edt_input"
+                android:inputType="textMultiLine"
+                android:maxLines="5"
+                android:minHeight="52dp"
+                android:minLines="1"
+                android:paddingHorizontal="@dimen/space_medium"
+                android:paddingVertical="@dimen/space_xsmall"
+                android:text="@={vm.message}"
+                android:textColor="?colorOnSurfaceVariant"
+                android:textSize="@dimen/font_medium"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btn_send"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_send"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_margin="@dimen/space_medium"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="@drawable/effect_ripple_circle"
+                android:padding="@dimen/space_medium"
+                android:src="@drawable/ic_send"
+                android:tint="@color/tint_icon_button_selector"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rec_chat_room"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/space_xxsmall"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/container_bottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:reverseLayout="true"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_message" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

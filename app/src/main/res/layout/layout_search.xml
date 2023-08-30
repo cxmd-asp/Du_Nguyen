@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.inputmethod.EditorInfo" />
+
+        <variable
+            name="searchHint"
+            type="String" />
+
+        <variable
+            name="searchQuery"
+            type="kotlinx.coroutines.flow.MutableStateFlow&lt;String&gt;" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?colorSurfaceVariant"
+        android:focusableInTouchMode="true"
+        android:paddingHorizontal="@dimen/space_medium"
+        android:paddingVertical="@dimen/space_xxxsmall">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edt_input"
+            android:paddingHorizontal="@dimen/space_xxsmall">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center|end"
+                android:padding="@dimen/space_xxxsmall"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/ic_search" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="45dp"
+                android:background="@null"
+                android:gravity="center|start"
+                android:hint="@{searchHint}"
+                android:inputType="text|textNoSuggestions"
+                android:maxLength="255"
+                android:maxLines="1"
+                android:minHeight="40dp"
+                android:paddingHorizontal="@dimen/space_medium"
+                android:text="@={searchQuery}"
+                android:textSize="@dimen/font_medium"
+                android:imeOptions="actionDone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:hint="@tools:sample/lorem/random" />
+
+        </FrameLayout>
+
+
+    </FrameLayout>
+</layout>

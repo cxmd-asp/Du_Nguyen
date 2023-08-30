@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:paddingHorizontal="@dimen/space_medium"
+        android:paddingVertical="@dimen/space_xxsmall">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_avatar"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:src="@drawable/ic_face_twotone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_name"
+            style="@style/TextMessageSender"
+            android:gravity="end"
+            app:layout_constraintEnd_toStartOf="@id/img_avatar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@tools:sample/full_names" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/CardMessageContent"
+            app:cardBackgroundColor="?colorPrimary"
+            app:contentPadding="@dimen/space_xsmall"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@id/img_avatar"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lbl_name">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lbl_content"
+                style="@style/TextMessageContent"
+                android:textColor="?colorOnPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/img_avatar"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:lines="5"
+                tools:text="@tools:sample/lorem/random" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?colorSurface">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:clipChildren="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="@android:color/transparent"
+                android:elevation="@dimen/elevation_medium"
+                app:elevation="@dimen/elevation_medium"
+                app:navigationIcon="@drawable/ic_arrow_back"
+                app:title="@null"
+                app:titleTextColor="@android:color/transparent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lbl_title"
+                style="@style/Toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:textFontWeight="700"
+                android:paddingHorizontal="@dimen/margin_horizontal_xxlarge"
+                tools:text="@tools:sample/cities"
+                tools:ignore="UnusedAttribute" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_line"
+                android:layout_gravity="bottom"
+                android:background="@drawable/bg_shadow" />
+        </FrameLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+</layout>
